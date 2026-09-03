@@ -1,0 +1,588 @@
+{
+  "titles": [
+    {
+      "id": "m1",
+      "name": "Avengers: Age of Ultron",
+      "kind": "movie",
+      "posterName": "poster_avengers_ultron",
+      "year": 2015,
+      "ageRating": "PG-13",
+      "durationMinutes": 141,
+      "genres": [
+        "Action",
+        "Sci-Fi",
+        "Adventure"
+      ],
+      "overview": "When Tony Stark's programme to protect the world goes awry, Earth's Mightiest Heroes must reassemble to stop the villainous Ultron from enacting his terrible plan.",
+      "cast": [
+        {
+          "id": "c0",
+          "name": "Robert Downey Jr.",
+          "character": "Tony Stark"
+        },
+        {
+          "id": "c1",
+          "name": "Chris Evans",
+          "character": "Steve Rogers"
+        },
+        {
+          "id": "c2",
+          "name": "Mark Ruffalo",
+          "character": "Bruce Banner"
+        },
+        {
+          "id": "c3",
+          "name": "Chris Hemsworth",
+          "character": "Thor"
+        }
+      ],
+      "isFeatured": true,
+      "isTrending": true
+    },
+    {
+      "id": "m2",
+      "name": "Captain America: The Winter Soldier",
+      "kind": "movie",
+      "posterName": "poster_winter_soldier",
+      "year": 2014,
+      "ageRating": "PG-13",
+      "durationMinutes": 136,
+      "genres": [
+        "Action",
+        "Thriller"
+      ],
+      "overview": "As Steve Rogers struggles to embrace his role in the modern world, he teams up with Black Widow to battle a powerful yet shadowy enemy in present-day Washington, D.C.",
+      "cast": [
+        {
+          "id": "c0",
+          "name": "Chris Evans",
+          "character": "Steve Rogers"
+        },
+        {
+          "id": "c1",
+          "name": "Scarlett Johansson",
+          "character": "Natasha Romanoff"
+        },
+        {
+          "id": "c2",
+          "name": "Sebastian Stan",
+          "character": "Bucky Barnes"
+        }
+      ],
+      "isFeatured": false,
+      "isTrending": true
+    },
+    {
+      "id": "m3",
+      "name": "Shang-Chi and the Legend of the Ten Rings",
+      "kind": "movie",
+      "posterName": "poster_shang_chi",
+      "year": 2021,
+      "ageRating": "PG-13",
+      "durationMinutes": 132,
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Adventure"
+      ],
+      "overview": "Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organisation.",
+      "cast": [
+        {
+          "id": "c0",
+          "name": "Simu Liu",
+          "character": "Shang-Chi"
+        },
+        {
+          "id": "c1",
+          "name": "Awkwafina",
+          "character": "Katy"
+        },
+        {
+          "id": "c2",
+          "name": "Tony Leung",
+          "character": "Wenwu"
+        }
+      ],
+      "isFeatured": true,
+      "isTrending": false
+    },
+    {
+      "id": "m4",
+      "name": "Spider-Man: Homecoming",
+      "kind": "movie",
+      "posterName": "poster_spiderman",
+      "year": 2017,
+      "ageRating": "PG-13",
+      "durationMinutes": 133,
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "overview": "Peter Parker balances his life as an ordinary high school student while fighting crime as his superhero alter-ego Spider-Man when a new threat emerges.",
+      "cast": [
+        {
+          "id": "c0",
+          "name": "Tom Holland",
+          "character": "Peter Parker"
+        },
+        {
+          "id": "c1",
+          "name": "Michael Keaton",
+          "character": "Adrian Toomes"
+        },
+        {
+          "id": "c2",
+          "name": "Zendaya",
+          "character": "MJ"
+        }
+      ],
+      "isFeatured": false,
+      "isTrending": true
+    },
+    {
+      "id": "m5",
+      "name": "Iron Man",
+      "kind": "movie",
+      "posterName": "poster_iron_man",
+      "year": 2008,
+      "ageRating": "PG-13",
+      "durationMinutes": 126,
+      "genres": [
+        "Action",
+        "Sci-Fi"
+      ],
+      "overview": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armour to fight evil.",
+      "cast": [
+        {
+          "id": "c0",
+          "name": "Robert Downey Jr.",
+          "character": "Tony Stark"
+        },
+        {
+          "id": "c1",
+          "name": "Gwyneth Paltrow",
+          "character": "Pepper Potts"
+        },
+        {
+          "id": "c2",
+          "name": "Jeff Bridges",
+          "character": "Obadiah Stane"
+        }
+      ],
+      "isFeatured": false,
+      "isTrending": false
+    },
+    {
+      "id": "m6",
+      "name": "Black Panther: Wakanda Forever",
+      "kind": "movie",
+      "posterName": "poster_wakanda_forever",
+      "year": 2022,
+      "ageRating": "PG-13",
+      "durationMinutes": 161,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama"
+      ],
+      "overview": "The people of Wakanda fight to protect their home from intervening world powers as they mourn the death of King T'Challa.",
+      "cast": [
+        {
+          "id": "c0",
+          "name": "Letitia Wright",
+          "character": "Shuri"
+        },
+        {
+          "id": "c1",
+          "name": "Lupita Nyong'o",
+          "character": "Nakia"
+        },
+        {
+          "id": "c2",
+          "name": "Danai Gurira",
+          "character": "Okoye"
+        }
+      ],
+      "isFeatured": true,
+      "isTrending": true
+    },
+    {
+      "id": "m7",
+      "name": "Thor",
+      "kind": "movie",
+      "posterName": "poster_thor",
+      "year": 2011,
+      "ageRating": "PG-13",
+      "durationMinutes": 115,
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "overview": "The powerful but arrogant god Thor is cast out of Asgard to live among humans on Earth, where he soon becomes one of their finest defenders.",
+      "cast": [
+        {
+          "id": "c0",
+          "name": "Chris Hemsworth",
+          "character": "Thor"
+        },
+        {
+          "id": "c1",
+          "name": "Natalie Portman",
+          "character": "Jane Foster"
+        },
+        {
+          "id": "c2",
+          "name": "Tom Hiddleston",
+          "character": "Loki"
+        }
+      ],
+      "isFeatured": false,
+      "isTrending": false
+    },
+    {
+      "id": "m8",
+      "name": "Captain America: The First Avenger",
+      "kind": "movie",
+      "posterName": "poster_first_avenger",
+      "year": 2011,
+      "ageRating": "PG-13",
+      "durationMinutes": 124,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "overview": "Steve Rogers, a rejected military soldier, transforms into Captain America after taking a dose of a super-soldier serum to aid the war effort.",
+      "cast": [
+        {
+          "id": "c0",
+          "name": "Chris Evans",
+          "character": "Steve Rogers"
+        },
+        {
+          "id": "c1",
+          "name": "Hayley Atwell",
+          "character": "Peggy Carter"
+        },
+        {
+          "id": "c2",
+          "name": "Hugo Weaving",
+          "character": "Red Skull"
+        }
+      ],
+      "isFeatured": false,
+      "isTrending": false
+    },
+    {
+      "id": "s1",
+      "name": "WandaVision",
+      "kind": "series",
+      "posterName": "poster_what_if",
+      "year": 2021,
+      "ageRating": "PG-13",
+      "durationMinutes": 350,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Sci-Fi"
+      ],
+      "overview": "Wanda Maximoff and Vision live an idyllic suburban life, but begin to suspect that everything is not as it seems.",
+      "cast": [
+        {
+          "id": "c0",
+          "name": "Elizabeth Olsen",
+          "character": "Wanda Maximoff"
+        },
+        {
+          "id": "c1",
+          "name": "Paul Bettany",
+          "character": "Vision"
+        },
+        {
+          "id": "c2",
+          "name": "Kathryn Hahn",
+          "character": "Agatha Harkness"
+        }
+      ],
+      "isFeatured": true,
+      "isTrending": true
+    },
+    {
+      "id": "s2",
+      "name": "Loki",
+      "kind": "series",
+      "posterName": "poster_loki",
+      "year": 2021,
+      "ageRating": "PG-13",
+      "durationMinutes": 300,
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Sci-Fi"
+      ],
+      "overview": "The mercurial villain Loki resumes his role as the God of Mischief in a new series that takes place after the events of Avengers: Endgame.",
+      "cast": [
+        {
+          "id": "c0",
+          "name": "Tom Hiddleston",
+          "character": "Loki"
+        },
+        {
+          "id": "c1",
+          "name": "Owen Wilson",
+          "character": "Mobius"
+        },
+        {
+          "id": "c2",
+          "name": "Sophia Di Martino",
+          "character": "Sylvie"
+        }
+      ],
+      "isFeatured": true,
+      "isTrending": true
+    },
+    {
+      "id": "s3",
+      "name": "Hawkeye",
+      "kind": "series",
+      "posterName": "poster_hawkeye",
+      "year": 2021,
+      "ageRating": "PG-13",
+      "durationMinutes": 330,
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "overview": "Former Avenger Clint Barton has a seemingly simple mission: get back to his family for Christmas. But can he? With the help of Kate Bishop.",
+      "cast": [
+        {
+          "id": "c0",
+          "name": "Jeremy Renner",
+          "character": "Clint Barton"
+        },
+        {
+          "id": "c1",
+          "name": "Hailee Steinfeld",
+          "character": "Kate Bishop"
+        }
+      ],
+      "isFeatured": false,
+      "isTrending": true
+    },
+    {
+      "id": "s4",
+      "name": "Moon Knight",
+      "kind": "series",
+      "posterName": "poster_moon_knight",
+      "year": 2022,
+      "ageRating": "TV-14",
+      "durationMinutes": 320,
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Mystery"
+      ],
+      "overview": "Steven Grant discovers he has dissociative identity disorder and shares a body with mercenary Marc Spector as enemies converge upon them.",
+      "cast": [
+        {
+          "id": "c0",
+          "name": "Oscar Isaac",
+          "character": "Marc Spector"
+        },
+        {
+          "id": "c1",
+          "name": "Ethan Hawke",
+          "character": "Arthur Harrow"
+        },
+        {
+          "id": "c2",
+          "name": "May Calamawy",
+          "character": "Layla"
+        }
+      ],
+      "isFeatured": true,
+      "isTrending": false
+    },
+    {
+      "id": "s5",
+      "name": "She-Hulk: Attorney at Law",
+      "kind": "series",
+      "posterName": "poster_she_hulk",
+      "year": 2022,
+      "ageRating": "TV-14",
+      "durationMinutes": 270,
+      "genres": [
+        "Comedy",
+        "Action"
+      ],
+      "overview": "Jennifer Walters navigates the complicated life of a single, 30-something attorney who also happens to be a green 6-foot-7-inch superhero.",
+      "cast": [
+        {
+          "id": "c0",
+          "name": "Tatiana Maslany",
+          "character": "Jennifer Walters"
+        },
+        {
+          "id": "c1",
+          "name": "Mark Ruffalo",
+          "character": "Bruce Banner"
+        },
+        {
+          "id": "c2",
+          "name": "Tim Roth",
+          "character": "Emil Blonsky"
+        }
+      ],
+      "isFeatured": false,
+      "isTrending": false
+    },
+    {
+      "id": "s6",
+      "name": "Loki: Agent Carter",
+      "kind": "series",
+      "posterName": "poster_agent_carter",
+      "year": 2015,
+      "ageRating": "PG-13",
+      "durationMinutes": 360,
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "overview": "In 1946, Peggy Carter must balance office work with secret missions for the Strategic Scientific Reserve while fighting to prove her worth.",
+      "cast": [
+        {
+          "id": "c0",
+          "name": "Hayley Atwell",
+          "character": "Peggy Carter"
+        },
+        {
+          "id": "c1",
+          "name": "James D'Arcy",
+          "character": "Edwin Jarvis"
+        }
+      ],
+      "isFeatured": false,
+      "isTrending": false
+    },
+    {
+      "id": "s7",
+      "name": "Jessica Jones",
+      "kind": "series",
+      "posterName": "poster_jessica_jones",
+      "year": 2015,
+      "ageRating": "TV-MA",
+      "durationMinutes": 390,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Action"
+      ],
+      "overview": "Following the tragic end of her superhero career, Jessica Jones opens a detective agency haunted by her past in Hell's Kitchen.",
+      "cast": [
+        {
+          "id": "c0",
+          "name": "Krysten Ritter",
+          "character": "Jessica Jones"
+        },
+        {
+          "id": "c1",
+          "name": "David Tennant",
+          "character": "Kilgrave"
+        }
+      ],
+      "isFeatured": false,
+      "isTrending": true
+    },
+    {
+      "id": "s8",
+      "name": "The Defenders",
+      "kind": "series",
+      "posterName": "poster_defenders",
+      "year": 2017,
+      "ageRating": "TV-MA",
+      "durationMinutes": 380,
+      "genres": [
+        "Action",
+        "Crime"
+      ],
+      "overview": "Four solitary heroes \u2014 Daredevil, Jessica Jones, Luke Cage and Iron Fist \u2014 unite to save New York City from a shadowy threat.",
+      "cast": [
+        {
+          "id": "c0",
+          "name": "Charlie Cox",
+          "character": "Matt Murdock"
+        },
+        {
+          "id": "c1",
+          "name": "Krysten Ritter",
+          "character": "Jessica Jones"
+        },
+        {
+          "id": "c2",
+          "name": "Mike Colter",
+          "character": "Luke Cage"
+        }
+      ],
+      "isFeatured": false,
+      "isTrending": false
+    },
+    {
+      "id": "s9",
+      "name": "Luke Cage",
+      "kind": "series",
+      "posterName": "poster_luke_cage",
+      "year": 2016,
+      "ageRating": "TV-MA",
+      "durationMinutes": 400,
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "overview": "A wrongly accused man gains super strength and unbreakable skin, then becomes a fugitive trying to rebuild his life in Harlem.",
+      "cast": [
+        {
+          "id": "c0",
+          "name": "Mike Colter",
+          "character": "Luke Cage"
+        },
+        {
+          "id": "c1",
+          "name": "Mahershala Ali",
+          "character": "Cottonmouth"
+        }
+      ],
+      "isFeatured": false,
+      "isTrending": false
+    },
+    {
+      "id": "s10",
+      "name": "Daredevil",
+      "kind": "series",
+      "posterName": "poster_daredevil",
+      "year": 2015,
+      "ageRating": "TV-MA",
+      "durationMinutes": 420,
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "overview": "A blind lawyer by day, vigilante by night. Matt Murdock fights the crime of New York as Daredevil while his city is threatened by Wilson Fisk.",
+      "cast": [
+        {
+          "id": "c0",
+          "name": "Charlie Cox",
+          "character": "Matt Murdock"
+        },
+        {
+          "id": "c1",
+          "name": "Vincent D'Onofrio",
+          "character": "Wilson Fisk"
+        }
+      ],
+      "isFeatured": true,
+      "isTrending": true
+    }
+  ]
+}

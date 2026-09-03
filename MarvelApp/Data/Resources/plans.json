@@ -1,0 +1,29 @@
+{
+  "plans": [
+    {
+      "id": "plan_all",
+      "name": "Movies & Series",
+      "pricePerMonth": 20,
+      "includedKinds": [
+        "movie",
+        "series"
+      ]
+    },
+    {
+      "id": "plan_movies",
+      "name": "Movies",
+      "pricePerMonth": 15,
+      "includedKinds": [
+        "movie"
+      ]
+    },
+    {
+      "id": "plan_series",
+      "name": "Series",
+      "pricePerMonth": 15,
+      "includedKinds": [
+        "series"
+      ]
+    }
+  ]
+}

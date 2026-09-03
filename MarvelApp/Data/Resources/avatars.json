@@ -1,0 +1,36 @@
+{
+  "avatars": [
+    {
+      "id": "avatar_1",
+      "imageName": "avatar_1"
+    },
+    {
+      "id": "avatar_2",
+      "imageName": "avatar_2"
+    },
+    {
+      "id": "avatar_3",
+      "imageName": "avatar_3"
+    },
+    {
+      "id": "avatar_4",
+      "imageName": "avatar_4"
+    },
+    {
+      "id": "avatar_5",
+      "imageName": "avatar_5"
+    },
+    {
+      "id": "avatar_6",
+      "imageName": "avatar_6"
+    },
+    {
+      "id": "avatar_7",
+      "imageName": "avatar_7"
+    },
+    {
+      "id": "avatar_8",
+      "imageName": "avatar_8"
+    }
+  ]
+}
