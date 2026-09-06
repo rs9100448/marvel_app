@@ -19,7 +19,8 @@ pipeline {
 
   options {
     timestamps()
-    ansiColor('xterm')
+    // (ansiColor removed — it requires the optional AnsiColor plugin. Install
+    //  that plugin and add `ansiColor('xterm')` here if you want colored logs.)
     // GitHub Actions equivalent: concurrency.cancel-in-progress
     disableConcurrentBuilds()
     buildDiscarder(logRotator(numToKeepStr: '20'))
