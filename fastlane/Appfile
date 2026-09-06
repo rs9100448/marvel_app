@@ -1,0 +1,11 @@
+app_identifier("com.ravindra.MarvelApp") # The app's bundle identifier
+
+# Not required for the test / build / (unsigned) archive lanes. Uncomment and
+# fill in once you have an Apple Developer / App Store Connect account and want
+# to upload builds.
+# apple_id("rs9100448@gmail.com")
+
+team_id("64SA835732") # Apple Developer Team ID (already set in the Xcode project)
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

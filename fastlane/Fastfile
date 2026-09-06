@@ -1,0 +1,89 @@
+# Fastfile — automation for MarvelApp
+# Docs: https://docs.fastlane.tools
+#
+# Lanes that work TODAY with no Apple credentials / no App Store Connect:
+#   fastlane test       -> run unit tests on a simulator (unsigned)
+#   fastlane build_ci   -> compile the app for a simulator (unsigned) — catches build breaks
+#   fastlane archive    -> create an UNSIGNED device .xcarchive artifact
+#
+# Lanes to enable LATER (need a signing certificate + provisioning profile, and
+# App Store Connect only for the final upload) are stubbed at the bottom.
+
+default_platform(:ios)
+
+PROJECT = "MarvelApp.xcodeproj"
+SCHEME  = "MarvelApp"
+CI_SIMULATOR = "iPhone 16"
+
+platform :ios do
+  desc "Run unit tests on the simulator"
+  lane :test do
+    run_tests(
+      project: PROJECT,
+      scheme: SCHEME,
+      devices: [CI_SIMULATOR],
+      only_testing: ["MarvelAppTests"],
+      result_bundle: true,
+      code_coverage: true,
+      output_directory: "fastlane/test_output"
+    )
+  end
+
+  desc "Compile the app for the simulator (unsigned) to catch build breaks"
+  lane :build_ci do
+    sh("cd .. && xcodebuild build " \
+       "-project #{PROJECT} " \
+       "-scheme #{SCHEME} " \
+       "-destination 'generic/platform=iOS Simulator' " \
+       "CODE_SIGNING_ALLOWED=NO")
+  end
+
+  desc "Create an UNSIGNED device archive (.xcarchive). Signed export/upload added later."
+  lane :archive do
+    # An unsigned Release archive builds today with no certificates. It proves the
+    # release configuration compiles for a real device and produces an artifact.
+    # You cannot export a distributable .ipa from it until signing is configured.
+    sh("cd .. && xcodebuild archive " \
+       "-project #{PROJECT} " \
+       "-scheme #{SCHEME} " \
+       "-configuration Release " \
+       "-destination 'generic/platform=iOS' " \
+       "-archivePath build/MarvelApp.xcarchive " \
+       "CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO")
+    UI.success("Unsigned archive at build/MarvelApp.xcarchive")
+
+    # ------------------------------------------------------------------
+    # TODO (STEP 1 — add when you have a signing cert + provisioning profile):
+    #   Replace the unsigned archive above with a signed export. Easiest is
+    #   fastlane `match` (stores certs in a private git repo):
+    #
+    #   match(type: "appstore", readonly: true)
+    #   build_app(
+    #     project: PROJECT, scheme: SCHEME,
+    #     export_method: "app-store",       # or "ad-hoc" / "development"
+    #     output_directory: "build"
+    #   )
+    #
+    # TODO (STEP 2 — add when you have App Store Connect + a .p8 API key):
+    #   Upload the signed build to TestFlight:
+    #
+    #   api_key = app_store_connect_api_key(
+    #     key_id: ENV["ASC_KEY_ID"],
+    #     issuer_id: ENV["ASC_ISSUER_ID"],
+    #     key_content: ENV["ASC_KEY_CONTENT"]
+    #   )
+    #   upload_to_testflight(api_key: api_key, skip_waiting_for_build_processing: true)
+    # ------------------------------------------------------------------
+  end
+
+  # desc "Build + ship to TestFlight (enable after STEP 1 & STEP 2 above)"
+  # lane :beta do
+  #   match(type: "appstore", readonly: true)
+  #   increment_build_number(xcodeproj: PROJECT)
+  #   build_app(project: PROJECT, scheme: SCHEME, export_method: "app-store")
+  #   api_key = app_store_connect_api_key(
+  #     key_id: ENV["ASC_KEY_ID"], issuer_id: ENV["ASC_ISSUER_ID"], key_content: ENV["ASC_KEY_CONTENT"]
+  #   )
+  #   upload_to_testflight(api_key: api_key)
+  # end
+end

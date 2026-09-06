@@ -1,0 +1,77 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:        # allows manual runs from the Actions tab
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  LANG: en_US.UTF-8
+  LC_ALL: en_US.UTF-8
+
+jobs:
+  build-test:
+    name: Build & Test
+    runs-on: macos-15       # GitHub-hosted Mac (Xcode preinstalled)
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby + Fastlane
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Show toolchain
+        run: xcodebuild -version && swift --version
+
+      - name: Build for simulator (unsigned)
+        run: bundle exec fastlane build_ci
+
+      - name: Run unit tests
+        run: bundle exec fastlane test
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: fastlane/test_output
+          if-no-files-found: ignore
+
+  archive:
+    name: Archive (unsigned)
+    runs-on: macos-15
+    needs: build-test
+    # Only on main or manual runs — never blocks pull requests.
+    if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby + Fastlane
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Create unsigned archive
+        run: bundle exec fastlane archive
+
+      - name: Upload .xcarchive
+        uses: actions/upload-artifact@v4
+        with:
+          name: MarvelApp-xcarchive
+          path: build/MarvelApp.xcarchive
+
+  # ------------------------------------------------------------------
+  # TODO: add a `deploy` job here once signing + App Store Connect are ready.
+  # It would run `bundle exec fastlane beta` with these repo secrets set under
+  # Settings -> Secrets and variables -> Actions:
+  #   ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_CONTENT, MATCH_PASSWORD, MATCH_GIT_URL
+  # ------------------------------------------------------------------
