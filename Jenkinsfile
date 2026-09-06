@@ -14,8 +14,11 @@
 //   * (Later, for signing) credentials added to the Jenkins Credentials store
 
 pipeline {
-  // GitHub Actions equivalent: `runs-on: macos-15`
-  agent { label 'macos' }
+  // GitHub Actions equivalent: `runs-on: macos-15`.
+  // Single-machine local Jenkins runs on the built-in node, so use `any`.
+  // In a real multi-agent setup you'd label your Mac agents and use:
+  //   agent { label 'macos' }
+  agent any
 
   options {
     timestamps()
