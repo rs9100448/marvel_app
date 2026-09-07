@@ -1,5 +1,7 @@
 # MarvelApp
 
+[![CI](https://github.com/rs9100448/marvel_app/actions/workflows/ci.yml/badge.svg)](https://github.com/rs9100448/marvel_app/actions/workflows/ci.yml)
+
 A SwiftUI iOS app implementing the [MARVEL APP (Community) Figma design](https://www.figma.com/design/qSCSoED83y65lgBkp6XPDv/MARVEL-APP--Community-) — a Marvel movies & series streaming concept. Built with a scalable, testable MVVM + Router architecture, type-safe navigation with `marvelapp://` deep links, per-field validation, and a dummy-JSON data layer that can be swapped for a real API without touching the UI.
 
 > The design has no live backend, so all content is served from bundled JSON. The data layer sits behind a protocol so a networked implementation can drop in later.
