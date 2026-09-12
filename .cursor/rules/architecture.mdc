@@ -1,0 +1,24 @@
+---
+description: MarvelApp architecture & navigation conventions
+globs: MarvelApp/**/*.swift
+alwaysApply: false
+---
+
+# Architecture (MVVM + Router)
+
+- **New screen** = a new `Features/<Name>/` folder with a SwiftUI `View` and an
+  `@Observable` ViewModel. Keep view logic in the ViewModel; views stay declarative.
+- **Navigation only through the `Router`**:
+  - Add a case to `AppRoute` (in-tab) or `AuthRoute` (sign-up flow), map it in the
+    relevant `navigationDestination`, and navigate with `router.push(...)` /
+    `router.advanceAuth(...)`. Never present destination views ad-hoc.
+  - Every user-facing screen should also be reachable by a `marvelapp://` deep link
+    (extend `DeepLink` + `DeepLinkParser` + `Router.apply`).
+- **Dependencies via protocols**: use `ContentRepository` and `AuthService` (not the
+  concrete `JSONContentRepository`/`DummyAuthService`). Resolve shared state from the
+  environment (`Router`, `SessionStore`, `LibraryStore`) or `AppContainer`.
+- **Validation**: field rules live in `Validator` (pure, `nonisolated`); show errors
+  through `MarvelTextField`; gate primary buttons on an aggregated `isValid`.
+- **Data**: bundled dummy JSON in `Data/Resources/`; decode via `BundleJSONLoader`.
+  Persist small state through the `KeyValueStore` seam (UserDefaults), not directly.
+- No third-party dependencies; iOS 17+ APIs are fine (`@Observable`, `NavigationStack`).
