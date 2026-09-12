@@ -25,3 +25,6 @@ fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/screenshots/screenshots.html
 fastlane/README.md
+
+# AI assistant local overrides (personal, not shared)
+.claude/settings.local.json
