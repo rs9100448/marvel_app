@@ -1,0 +1,18 @@
+---
+description: MarvelApp testing conventions
+globs: MarvelAppTests/**/*.swift,MarvelAppUITests/**/*.swift
+alwaysApply: false
+---
+
+# Testing
+
+- Unit tests use **Swift Testing** (`import Testing`, `@Test`, `#expect`) in
+  `MarvelAppTests/` — match the existing suites (`ValidatorTests`, `RouterTests`,
+  `DeepLinkParserTests`, `DataLayerTests`, `ViewModelTests`, `NavigationGestureTests`).
+- Inject test doubles: `MockContentRepository`, and `InMemoryKeyValueStore` for
+  `SessionStore`/`LibraryStore`. Use `DummyAuthService(latency: .zero)` to avoid delays.
+- Prefer testing **pure logic** (validators, deep-link parsing, repositories, view-model
+  state) over UI. Keep new logic in a `nonisolated`/injectable place so it's testable.
+- UI tests (`MarvelAppUITests/`) use XCTest; the app supports the `-uitestAuthed`
+  launch argument to boot straight to an authenticated Home.
+- Run locally with `bundle exec fastlane test`; CI runs the same lane.

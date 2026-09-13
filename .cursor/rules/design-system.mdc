@@ -1,0 +1,18 @@
+---
+description: MarvelApp design-system usage (colors, typography, spacing)
+globs: MarvelApp/**/*.swift
+alwaysApply: false
+---
+
+# Design system
+
+- Use design tokens, never raw values:
+  - Colors: `Theme.Colors.*` (e.g. `Theme.Colors.red`, `.background`, `.textPrimary`). Do NOT hardcode hex or `Color(red:green:blue:)` in views.
+  - Fonts: `AppFont.*` (e.g. `AppFont.title`, `.button`, `.body`) — the Inter type scale. Do NOT use `.system(size:)` or `Font.custom(...)` directly in features.
+  - Spacing/radii: `Theme.Spacing.*` / `Theme.Radius.*`.
+- Reuse shared components in `Core/Components/` (`MarvelButton`, `MarvelTextField`,
+  `PosterCard`, `StepIndicatorView`, `CodeEntryField`, `MarvelConfirmDialog`) instead
+  of re-building buttons/fields/dialogs.
+- Screens use `.screenBackground()` for the standard black background.
+- Assets: reference images by their asset-catalog names (`poster_*`, `avatar_*`,
+  `brand_*`); add new ones to `Assets.xcassets` rather than bundling loose files.

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(bundle exec fastlane test:*)",
+      "Bash(bundle exec fastlane build_ci:*)",
+      "Bash(bundle exec fastlane archive:*)",
+      "Bash(bundle install:*)",
+      "Bash(xcodebuild:*)",
+      "Bash(xcrun simctl:*)",
+      "Bash(rbenv:*)",
+      "Bash(swiftlint:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git branch:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)"
+    ],
+    "deny": [
+      "Bash(git push --force:*)",
+      "Read(./**/*.p8)",
+      "Read(./**/secrets/**)"
+    ]
+  }
+}
